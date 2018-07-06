@@ -38,22 +38,80 @@ LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR_SHARED_LIBRARIES)
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE_TAGS   := eng
-LOCAL_MODULE        := tad_static
-LOCAL_MODULE_CLASS  := BIN
-LOCAL_SRC_FILES     := proprietary/sbin/tad_static
-LOCAL_MODULE_TAGS   := optional
-LOCAL_MODULE_PATH   := $(TARGET_ROOT_OUT_SBIN)
-LOCAL_ADDITIONAL_DEPENDENCIES := wait4tad_static
+LOCAL_MODULE := TimeService
+LOCAL_MODULE_OWNER := sony
+LOCAL_SRC_FILES := proprietary/app/TimeService/TimeService.apk
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := APPS
+LOCAL_DEX_PREOPT := false
+LOCAL_MODULE_SUFFIX := .apk
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE_TAGS   := eng
-LOCAL_MODULE        := wait4tad_static
-LOCAL_MODULE_CLASS  := BIN
-LOCAL_SRC_FILES     := proprietary/sbin/wait4tad_static
-LOCAL_MODULE_TAGS   := optional
-LOCAL_MODULE_PATH   := $(TARGET_ROOT_OUT_SBIN)
+LOCAL_MODULE := libTimeService
+LOCAL_MODULE_OWNER := sony
+LOCAL_SRC_FILES := proprietary/vendor/lib/libTimeService.so
+LOCAL_MULTILIB := 32
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_PROPRIETARY_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libqmi_cci
+LOCAL_MODULE_OWNER := sony
+LOCAL_SRC_FILES := proprietary/vendor/lib/libqmi_cci.so
+LOCAL_MULTILIB := 32
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_PROPRIETARY_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libqmi_csi
+LOCAL_MODULE_OWNER := sony
+LOCAL_SRC_FILES := proprietary/vendor/lib/libqmi_csi.so
+LOCAL_MULTILIB := 32
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_PROPRIETARY_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libqmi_common_so
+LOCAL_MODULE_OWNER := sony
+LOCAL_SRC_FILES := proprietary/vendor/lib/libqmi_common_so.so
+LOCAL_MULTILIB := 32
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_PROPRIETARY_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libdsi_netctrl
+LOCAL_MODULE_OWNER := sony
+LOCAL_SRC_FILES := proprietary/vendor/lib/libdsi_netctrl.so
+LOCAL_MULTILIB := 32
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_PROPRIETARY_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libqmiservices
+LOCAL_MODULE_OWNER := sony
+LOCAL_SRC_FILES := proprietary/vendor/lib/libqmiservices.so
+LOCAL_MULTILIB := 32
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_PROPRIETARY_MODULE := true
 include $(BUILD_PREBUILT)
 
 endif
