@@ -112,7 +112,6 @@ PRODUCT_COPY_FILES += \
     vendor/sony/ivy/proprietary/etc/firmware/venus.mdt:system/etc/firmware/venus.mdt \
     vendor/sony/ivy/proprietary/etc/firmware/wlan/bcmdhd/fw_bcmdhd.bin:system/etc/firmware/wlan/bcmdhd/fw_bcmdhd.bin \
     vendor/sony/ivy/proprietary/etc/firmware/wlan/bcmdhd/fw_bcmdhd_apsta.bin:system/etc/firmware/wlan/bcmdhd/fw_bcmdhd_apsta.bin \
-    vendor/sony/ivy/proprietary/etc/flashled_calc_parameters.cfg:system/etc/flashled_calc_parameters.cfg \
     vendor/sony/ivy/proprietary/etc/sensors/hals.conf:system/etc/sensors/hals.conf \
     vendor/sony/ivy/proprietary/etc/sensors/sensor_def_qcomdev.conf:system/etc/sensors/sensor_def_qcomdev.conf \
     vendor/sony/ivy/proprietary/etc/touch_fw_update.sh:system/etc/touch_fw_update.sh \
@@ -139,6 +138,7 @@ PRODUCT_COPY_FILES += \
     vendor/sony/ivy/proprietary/lib/camera/libexcal_snapshot_ctrl_plugin.so:system/lib/camera/libexcal_snapshot_ctrl_plugin.so \
     vendor/sony/ivy/proprietary/lib/camera/libexcal_splitter_plugin.so:system/lib/camera/libexcal_splitter_plugin.so \
     vendor/sony/ivy/proprietary/lib/camera/libexcal_stream_ctrl_plugin.so:system/lib/camera/libexcal_stream_ctrl_plugin.so \
+    vendor/sony/ivy/proprietary/lib/drm/libdrmwvmplugin.so:system/lib/drm/libdrmwvmplugin.so \
     vendor/sony/ivy/proprietary/lib/hw/camera.qcom.so:system/lib/hw/camera.qcom.so \
     vendor/sony/ivy/proprietary/lib/hw/gps.default.so:system/lib/hw/gps.default.so \
     vendor/sony/ivy/proprietary/lib/libMiscTaAccessor.so:system/lib/libMiscTaAccessor.so \
@@ -211,7 +211,6 @@ PRODUCT_COPY_FILES += \
     vendor/sony/ivy/proprietary/lib64/lib-preload64.so:system/lib64/lib-preload64.so \
     vendor/sony/ivy/proprietary/lib64/libMiscTaAccessor.so:system/lib64/libMiscTaAccessor.so \
     vendor/sony/ivy/proprietary/lib64/lib_asb_tee.so:system/lib64/lib_asb_tee.so \
-    vendor/sony/ivy/proprietary/lib64/lib_get_secure_mode.so:system/lib64/lib_get_secure_mode.so \
     vendor/sony/ivy/proprietary/lib64/libcamera_clientsemc.so:system/lib64/libcamera_clientsemc.so \
     vendor/sony/ivy/proprietary/lib64/libcameralight.so:system/lib64/libcameralight.so \
     vendor/sony/ivy/proprietary/lib64/libcredential-manager-service.so:system/lib64/libcredential-manager-service.so \
@@ -378,6 +377,7 @@ PRODUCT_COPY_FILES += \
     vendor/sony/ivy/proprietary/vendor/lib/libQSEEComAPI.so:system/vendor/lib/libQSEEComAPI.so \
     vendor/sony/ivy/proprietary/vendor/lib/libRSDriver_adreno.so:system/vendor/lib/libRSDriver_adreno.so \
     vendor/sony/ivy/proprietary/vendor/lib/libStDrvInt.so:system/vendor/lib/libStDrvInt.so \
+    vendor/sony/ivy/proprietary/vendor/lib/libWVStreamControlAPI_L1.so:system/vendor/lib/libWVStreamControlAPI_L1.so \
     vendor/sony/ivy/proprietary/vendor/lib/libacdb-fts.so:system/vendor/lib/libacdb-fts.so \
     vendor/sony/ivy/proprietary/vendor/lib/libacdbloader.so:system/vendor/lib/libacdbloader.so \
     vendor/sony/ivy/proprietary/vendor/lib/libacdbrtac.so:system/vendor/lib/libacdbrtac.so \
@@ -589,8 +589,11 @@ PRODUCT_COPY_FILES += \
     vendor/sony/ivy/proprietary/vendor/lib/libulp2.so:system/vendor/lib/libulp2.so \
     vendor/sony/ivy/proprietary/vendor/lib/libvendorconn.so:system/vendor/lib/libvendorconn.so \
     vendor/sony/ivy/proprietary/vendor/lib/libwqe.so:system/vendor/lib/libwqe.so \
+    vendor/sony/ivy/proprietary/vendor/lib/libwvdrm_L1.so:system/vendor/lib/libwvdrm_L1.so \
+    vendor/sony/ivy/proprietary/vendor/lib/libwvm.so:system/vendor/lib/libwvm.so \
     vendor/sony/ivy/proprietary/vendor/lib/libxml.so:system/vendor/lib/libxml.so \
     vendor/sony/ivy/proprietary/vendor/lib/libxtadapter.so:system/vendor/lib/libxtadapter.so \
+    vendor/sony/ivy/proprietary/vendor/lib/mediadrm/libwvdrmengine.so:system/vendor/lib/mediadrm/libwvdrmengine.so \
     vendor/sony/ivy/proprietary/vendor/lib/sensors.ssc.so:system/vendor/lib/sensors.ssc.so \
     vendor/sony/ivy/proprietary/vendor/lib/soundfx/libqcbassboost.so:system/vendor/lib/soundfx/libqcbassboost.so \
     vendor/sony/ivy/proprietary/vendor/lib/soundfx/libqcreverb.so:system/vendor/lib/soundfx/libqcreverb.so \
